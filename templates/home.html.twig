@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <div class="jumbotron text-center">
+        <h1>Pizzeria UTEC</h1>
+        <p>Bienvenue sur l'application web du restaurant UTEC,
+            choisissez parmis les meilleurs pizzas et commandez en un click!</p>
+    </div>
+
+
+    <br><a href="{{ path('pizza') }}" class="brk-btn">
+        Pizza
+    </a>
+{% endblock %}

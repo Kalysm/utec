@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Pizza{% endblock %}
+
+{% block body %}
+    {% for pizzas in pizza %}
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-8">
+
+            </div>
+            <div class="col-md-4">
+                <h1>{{ pizzas.name }}</h1>
+                <img src="{{ asset('img/margarita.jpg') }}">
+                <br class="text-primary" style="font-size: 4rem;font-weight: bold;">{{ pizzas.price }}€</div><br>
+
+            <a href="{{ path('cart_add', {'id': pizzas.id}) }}" class="btn btn-success float-right">
+                <i class="fas fa-shopping-cart mr-1"></i>
+                    Ajouter
+            </a>
+    {% endfor %}
+{% endblock %}
